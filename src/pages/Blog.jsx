@@ -23,7 +23,7 @@ export default function BlogIndex() {
     const [total, setTotal] = useState(0);
     const [loading, setLoading] = useState(true);
 
-    const BASE = "http://127.0.0.1:8000/api";
+    const BASE = "https://tech-zone-backend-production.up.railway.app/api";
 
     const fetchCategories = async () => {
         try {
@@ -175,7 +175,7 @@ export default function BlogIndex() {
                                         {/* Thumbnail */}
                                         {b.thumbnail ? (
                                             <img
-                                                src={b.thumbnail.startsWith("http") ? b.thumbnail : `http://127.0.0.1:8000/storage/${b.thumbnail}`}
+                                                src={b.thumbnail.startsWith("http") ? b.thumbnail : `https://tech-zone-backend-production.up.railway.app/storage/${b.thumbnail}`}
                                                 alt={b.title}
                                                 style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover" }}
                                             />

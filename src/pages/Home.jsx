@@ -5,6 +5,12 @@
         import ProductSkeleton from "../components/loaders/ProductSkeleton";
         import Swal from "sweetalert2";
 
+
+
+
+ const BASE = "https://tech-zone-backend-production.up.railway.app";
+
+
         function StarRating({ rating, size = "12px" }) {
             return (
                 <span>
@@ -61,7 +67,7 @@
 
             try {
 
-                await axios.post("http://127.0.0.1:8000/api/cart", {
+               await axios.post(`${BASE}/api/cart`, {
                     user_id: user.id,
                     product_id: productId,
                     quantity: 1,
@@ -94,7 +100,7 @@
 
             try {
 
-                await axios.post("http://127.0.0.1:8000/api/wishlist", {
+               await axios.post(`${BASE}/api/wishlist`, {
                     user_id: user.id,
                     product_id: product.id,
                 });
@@ -122,7 +128,7 @@
             const [flashProducts, setFlashProducts] = useState([]);
             const [featuredProducts, setFeaturedProducts] = useState([]);
             const [loading, setLoading] = useState(true);
-            const BASE = "http://127.0.0.1:8000";
+           
             useEffect(() => {
                 Promise.all([
                     axios.get(`${BASE}/api/home-page`),
