@@ -15,7 +15,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Footer from "./components/Footer";
 import Blog from "./pages/Blog";
-import Categories from "./pages/Categories";
+import categories from "./pages/categories";
 import SingleBlog from "./pages/SingleBlog";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -53,7 +53,7 @@ export default function App() {
           <Route path="*" element={<Navigate to="/" />} />
           <Route path="payment-failed" element={<PaymentFailed />} />
           <Route path="/about" element={<About />} />
-          <Route path="/categories" element={<Categories />} />
+          <Route path="/categories" element={<categories />} />
 
         </Route>
       </Routes>
