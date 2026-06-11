@@ -787,7 +787,7 @@ export default function Products() {
                                                 {/* ── Image ── */}
                                                 <div className="tz-pc-img">
                                                     <img
-                                                      src={`${BASE}/storage/${p.image}`}
+                                                     src={p.image_url || `${BASE}/storage/${p.image}`}
                                                         alt={p.name}
                                                     />
 
