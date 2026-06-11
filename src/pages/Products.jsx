@@ -5,6 +5,9 @@ import axios from "axios";
 import "./Product.css";
 import Swal from "sweetalert2";
 
+
+const BASE = "https://tech-zone-backend-production.up.railway.app";
+
 function StarRating({ rating = 0 }) {
     const full = Math.floor(rating);
     const half = rating - full >= 0.5;
@@ -190,8 +193,8 @@ export default function Products() {
 
         if (category) setActiveCategory(category);
 
-        axios
-            .get("http://127.0.0.1:8000/api/products", { params })
+
+        axios.get(`${BASE}/api/products`, { params })
             .then((res) => {
                 const data = Array.isArray(res.data) ? res.data : (res.data?.data ?? []);
                 setProducts(data);
@@ -215,8 +218,7 @@ export default function Products() {
 
         if (user) {
 
-            axios
-                .get(`http://127.0.0.1:8000/api/cart/${user.id}`)
+            axios.get(`${BASE}/api/cart/${user.id}`)
                 .then((res) => setCart(res.data))
                 .catch(console.log);
 
@@ -228,8 +230,7 @@ export default function Products() {
 
         if (user) {
 
-            axios
-                .get(`http://127.0.0.1:8000/api/wishlist/${user.id}`)
+            axios.get(`${BASE}/api/wishlist/${user.id}`)
                 .then((res) => setWishlistData(res.data))
                 .catch(console.log);
 
@@ -248,7 +249,7 @@ export default function Products() {
         try {
 
             const res = await axios.get(
-                `http://127.0.0.1:8000/api/cart/${user.id}`
+                `${BASE}/api/cart/${user.id}`
             );
 
             setCart(res.data);
@@ -290,8 +291,7 @@ export default function Products() {
 
         try {
 
-            await axios.post(
-                "http://127.0.0.1:8000/api/cart",
+           await axios.post(`${BASE}/api/cart`,
                 {
                     user_id: user.id,
                     product_id: productId,
@@ -328,7 +328,7 @@ export default function Products() {
         try {
 
             const res = await axios.get(
-                `http://127.0.0.1:8000/api/wishlist/${user.id}`
+               `${BASE}/api/wishlist/${user.id}`
             );
 
             setWishlistData(res.data);
@@ -359,7 +359,7 @@ export default function Products() {
 
         }
         try {
-            await axios.post("http://127.0.0.1:8000/api/wishlist", {
+           await axios.post(`${BASE}/api/wishlist`, {
                 user_id: user?.id,
                 product_id: product.id,
             });
@@ -787,7 +787,7 @@ export default function Products() {
                                                 {/* ── Image ── */}
                                                 <div className="tz-pc-img">
                                                     <img
-                                                        src={`http://127.0.0.1:8000/storage/${p.image}`}
+                                                      src={`${BASE}/storage/${p.image}`}
                                                         alt={p.name}
                                                     />
 
