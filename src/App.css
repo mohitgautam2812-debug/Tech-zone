@@ -1,0 +1,81 @@
+:root {
+  --tz-bg-deep: #060d1a;
+  --tz-bg-card: #0d1829;
+  --tz-bg-card2: #0a1422;
+  --tz-bg-glass: rgba(10, 18, 35, 0.72);
+  --tz-border: rgba(0, 180, 255, 0.12);
+  --tz-border-md: rgba(0, 200, 255, 0.22);
+  --tz-border-hover: rgba(0, 200, 255, 0.38);
+  --tz-neon: #00c8ff;
+  --tz-neon-dim: rgba(0, 200, 255, 0.10);
+  --tz-neon-glow: 0 0 22px rgba(0, 200, 255, 0.4);
+  --tz-purple: #7b61ff;
+  --tz-purple-dim: rgba(123, 97, 255, 0.12);
+  --tz-text: #e8f4ff;
+  --tz-text-muted: #6a8ba8;
+  --tz-text-sub: #4a6a88;
+  --tz-white: #ffffff;
+  --tz-radius: 16px;
+  --tz-radius-lg: 22px;
+  --tz-radius-pill: 999px;
+  --tz-transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  ---tz-font-head: 'Inter', sans-serif;
+  --tz-font-body: 'Inter', sans-serif;
+
+}
+
+  .navbar {
+    background: #1a1a1a;
+    border-bottom: 3px solid #dc3545;
+  }
+
+  .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: #dc3545 !important;
+  }
+
+  .logo-box {
+    background: #dc3545;
+    border-radius: 8px;
+    padding: 6px 12px;
+  }
+
+  .logo-box span {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: .05em;
+  }
+
+  .logo-box small {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: .6rem;
+    letter-spacing: .15em;
+  }
+
+  .btn-login {
+    border-color: rgba(255, 255, 255, 0.35);
+    color: #fff !important;
+  }
+
+  .btn-login:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #fff;
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
+  .reviews-empty-state {
+    display: none !important;
+  }
+
+
+  

@@ -1,0 +1,312 @@
+.tz-review-form {
+    background: var(--tz-bg-card);
+    border: 1px solid var(--tz-border);
+    border-radius: var(--tz-radius-lg);
+    padding: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.tz-review-form-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tz-review-form-title i {
+    color: var(--tz-neon);
+}
+
+/* ── Form label ── */
+.tz-form-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--tz-text-muted);
+    margin-bottom: 0.45rem;
+    display: block;
+}
+
+/* ── Select ── */
+.tz-select {
+    width: 100%;
+    background: var(--tz-bg-deep);
+    border: 1px solid var(--tz-border);
+    border-radius: var(--tz-radius);
+    padding: 0.6rem 1rem;
+    font-size: 0.83rem;
+    color: var(--tz-text);
+    outline: none;
+    cursor: pointer;
+    transition: border-color var(--tz-transition), box-shadow var(--tz-transition);
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2300c8ff'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 10px;
+    padding-right: 2.5rem;
+}
+
+.tz-select:focus {
+    border-color: var(--tz-neon);
+    box-shadow: 0 0 0 3px rgba(0, 200, 255, 0.08);
+}
+
+.tz-select option {
+    background: var(--tz-bg-card);
+}
+
+
+.tz-textarea {
+    width: 100%;
+    background: var(--tz-bg-deep);
+    border: 1px solid var(--tz-border);
+    border-radius: var(--tz-radius);
+    padding: 0.7rem 1rem;
+    font-size: 0.83rem;
+    color: var(--tz-text);
+    outline: none;
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+    transition: border-color var(--tz-transition), box-shadow var(--tz-transition);
+}
+
+.tz-textarea::placeholder {
+    color: var(--tz-text-muted);
+}
+
+.tz-reviews-section {
+    display: none;
+}
+
+.tz-textarea:focus {
+    border-color: var(--tz-neon);
+    box-shadow: 0 0 0 3px rgba(0, 200, 255, 0.08);
+}
+
+
+.tz-file-input {
+    width: 100%;
+    background: var(--tz-bg-deep);
+    border: 1px dashed var(--tz-border);
+    border-radius: var(--tz-radius);
+    padding: 0.6rem 1rem;
+    font-size: 0.78rem;
+    color: var(--tz-text-muted);
+    cursor: pointer;
+    transition: border-color var(--tz-transition);
+    outline: none;
+}
+
+.tz-file-input:hover {
+    border-color: var(--tz-border-hover);
+}
+
+.tz-file-input:focus {
+    border-color: var(--tz-neon);
+}
+
+
+.tz-submit-btn {
+    background: var(--tz-neon);
+    color: #000;
+    font-weight: 700;
+    font-size: 0.83rem;
+    padding: 0.6rem 1.6rem;
+    border: none;
+    border-radius: var(--tz-radius-pill);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    transition: box-shadow var(--tz-transition), transform var(--tz-transition);
+}
+
+.tz-submit-btn:hover {
+    box-shadow: var(--tz-neon-glow);
+    transform: translateY(-1px);
+}
+
+
+.tz-star-row {
+    display: flex;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.tz-star-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: var(--tz-border);
+    transition: color var(--tz-transition), transform var(--tz-transition);
+}
+
+.tz-star-btn.filled {
+    color: #fbbf24;
+}
+
+.tz-star-btn:hover {
+    transform: scale(1.2);
+}
+
+
+.tz-reviews-section {
+    margin-top: 0.5rem;
+}
+
+.tz-reviews-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.tz-reviews-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tz-reviews-count {
+    background: var(--tz-neon-dim);
+    border: 1px solid var(--tz-border);
+    color: var(--tz-neon);
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 0.15rem 0.55rem;
+    border-radius: var(--tz-radius-pill);
+}
+
+
+.tz-review-card {
+    background: var(--tz-bg-card);
+    border: 1px solid var(--tz-border);
+    border-radius: var(--tz-radius-lg);
+    padding: 1.25rem 1.4rem;
+    margin-bottom: 0.85rem;
+    transition: border-color var(--tz-transition), transform var(--tz-transition);
+}
+
+.tz-review-card:hover {
+    border-color: var(--tz-border-hover);
+    transform: translateY(-2px);
+}
+
+
+.tz-reviewer-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.tz-reviewer-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--tz-neon);
+    color: #000;
+    font-weight: 800;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 2px solid var(--tz-border);
+}
+
+.tz-reviewer-name {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.tz-reviewer-date {
+    font-size: 0.7rem;
+    color: var(--tz-text-muted);
+}
+
+
+.tz-review-stars {
+    display: flex;
+    gap: 0.15rem;
+    margin-bottom: 0.55rem;
+}
+
+.tz-review-stars i {
+    color: #fbbf24;
+    font-size: 0.75rem;
+}
+
+.tz-review-stars i.empty {
+    color: var(--tz-border);
+}
+
+
+.tz-review-text {
+    font-size: 0.83rem;
+    color: var(--tz-text-muted);
+    line-height: 2;
+    margin: 15px 0 15px 0;
+}
+
+
+.tz-review-img {
+    width: 72px;
+    height: 72px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid var(--tz-border);
+    margin-top: 0.25rem;
+}
+
+
+.tz-no-reviews {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: var(--tz-text-muted);
+}
+
+.tz-no-reviews i {
+    font-size: 2rem;
+    color: var(--tz-neon);
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.tz-no-reviews p {
+    font-size: 0.83rem;
+    margin: 0;
+}
+
+
+.tz-editing-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: rgba(0, 200, 255, 0.1);
+    border: 1px solid var(--tz-border-hover);
+    color: var(--tz-neon);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.65rem;
+    border-radius: var(--tz-radius-pill);
+    margin-bottom: 1rem;
+}

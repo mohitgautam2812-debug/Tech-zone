@@ -1,0 +1,1054 @@
+/* About.css — matches home.css design system */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --ab-bg: #F5F7FA;
+    --ab-bg-card: #FFFFFF;
+    --ab-bg-card2: #F8FAFC;
+    --ab-border: #E5E7EB;
+    --ab-border-hover: #D1D5DB;
+    --ab-primary: #2874F0;
+    --ab-primary-dark: #1a5fd1;
+    --ab-primary-light: #EBF2FF;
+    --ab-accent: #FF6D00;
+    --ab-accent-light: #fff3e0;
+    --ab-success: #00897B;
+    --ab-success-light: #e0f2f1;
+    --ab-yellow: #F59E0B;
+    --ab-text: #111827;
+    --ab-muted: #6B7280;
+    --ab-sub: #9CA3AF;
+    --ab-font: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ── Base ── */
+.ab-page {
+    background: var(--ab-bg);
+    min-height: 100vh;
+    font-family: var(--ab-font);
+    color: var(--ab-text);
+}
+
+/* ── Section ── */
+.ab-section {
+    padding: 72px 0;
+    border-top: 1px solid var(--ab-border);
+}
+
+.ab-section-alt {
+    background: var(--ab-bg-card2);
+}
+
+/* ── Section Labels / Headings ── */
+.ab-section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--ab-primary-light);
+    border: none;
+    color: var(--ab-primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
+
+.ab-section-title {
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    font-weight: 800;
+    color: var(--ab-text);
+    margin-bottom: 14px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.ab-section-sub {
+    color: var(--ab-muted);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* ── Gradient text → flat primary ── */
+.ab-grad {
+    color: var(--ab-primary);
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background-clip: unset;
+}
+
+/* ── Buttons ── */
+.ab-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--ab-primary);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 28px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background .2s, box-shadow .2s, transform .2s;
+    cursor: pointer;
+    font-family: var(--ab-font);
+}
+
+.ab-btn-primary:hover {
+    background: var(--ab-primary-dark);
+    box-shadow: 0 4px 16px rgba(40, 116, 240, 0.35);
+    transform: translateY(-1px);
+    color: #fff;
+}
+
+.ab-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: var(--ab-primary);
+    border: 2px solid var(--ab-primary);
+    border-radius: 999px;
+    padding: 11px 28px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all .2s;
+    cursor: pointer;
+    font-family: var(--ab-font);
+}
+
+.ab-btn-ghost:hover {
+    background: var(--ab-primary);
+    color: #fff;
+}
+
+/* ── Hero ── */
+.ab-hero {
+    position: relative;
+    padding: 100px 0 80px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid var(--ab-border);
+    background: linear-gradient(135deg, #EBF2FF 0%, #F0F4FF 50%, #E8F4FB 100%);
+}
+
+.ab-hero-glow {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(ellipse at center, rgba(40, 116, 240, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.ab-hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--ab-accent-light);
+    border: 1px solid rgba(255, 109, 0, 0.2);
+    color: var(--ab-accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.ab-hero-title {
+    font-size: clamp(2rem, 6vw, 3.4rem);
+    font-weight: 800;
+    color: var(--ab-text);
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.ab-hero-sub {
+    color: var(--ab-muted);
+    font-size: 16px;
+    line-height: 1.75;
+    max-width: 580px;
+    margin: 0 auto 32px;
+}
+
+/* ── Stats Strip ── */
+.ab-stats-strip {
+    padding: 36px 0;
+    background: #fff;
+    border-top: 1px solid var(--ab-border);
+    border-bottom: 1px solid var(--ab-border);
+}
+
+.ab-stat-card {
+    background: var(--ab-bg-card2);
+    border: 1px solid var(--ab-border);
+    border-radius: 14px;
+    padding: 24px 16px;
+    text-align: center;
+    transition: border-color .2s, transform .2s, box-shadow .2s;
+}
+
+.ab-stat-card:hover {
+    border-color: var(--ab-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(40, 116, 240, 0.10);
+}
+
+.ab-stat-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--ab-primary-light);
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ab-primary);
+    font-size: 18px;
+    margin: 0 auto 12px;
+}
+
+.ab-stat-val {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--ab-primary);
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background-clip: unset;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.ab-stat-label {
+    font-size: 11px;
+    color: var(--ab-sub);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+}
+
+/* ── Story Panel ── */
+.ab-story-panel {
+    background: var(--ab-bg-card);
+    border: 1px solid var(--ab-border);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.ab-story-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--ab-border);
+}
+
+.ab-story-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    background: var(--ab-primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.ab-story-panel-title {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ab-text);
+}
+
+.ab-story-panel-sub {
+    font-size: 12px;
+    color: var(--ab-muted);
+    margin-top: 2px;
+}
+
+.ab-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--ab-border);
+}
+
+.ab-feature-item:last-of-type {
+    border-bottom: none;
+}
+
+.ab-feature-dot {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    background: var(--ab-success-light);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ab-success);
+    font-size: 13px;
+}
+
+.ab-feature-text {
+    font-size: 13px;
+    color: var(--ab-muted);
+    line-height: 1.5;
+}
+
+.ab-panel-note {
+    margin-top: 18px;
+    background: var(--ab-success-light);
+    border: none;
+    border-radius: 8px;
+    color: var(--ab-success);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 14px;
+}
+
+/* ── Value Cards ── */
+.ab-value-card {
+    background: var(--ab-bg-card);
+    border: 1px solid var(--ab-border);
+    border-radius: 16px;
+    padding: 28px 24px;
+    height: 100%;
+    transition: border-color .2s, transform .2s, box-shadow .2s;
+}
+
+.ab-value-card:hover {
+    border-color: var(--ab-primary);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(40, 116, 240, 0.10);
+}
+
+.ab-value-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--ab-primary);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 14px rgba(40, 116, 240, 0.25);
+}
+
+.ab-value-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ab-text);
+    margin-bottom: 10px;
+}
+
+.ab-value-desc {
+    font-size: 13px;
+    color: var(--ab-muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ── Timeline ── */
+.ab-timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.ab-timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, var(--ab-primary), var(--ab-primary-dark), transparent);
+    opacity: 0.25;
+}
+
+.ab-timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: calc(50% + 36px);
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.ab-timeline-item.ab-tl-right {
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: calc(50% + 36px);
+}
+
+.ab-tl-dot {
+    position: absolute;
+    left: 50%;
+    top: 18px;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    background: var(--ab-primary);
+    border-radius: 50%;
+    border: 3px solid var(--ab-bg);
+    box-shadow: 0 0 10px rgba(40, 116, 240, 0.35);
+    z-index: 1;
+}
+
+.ab-tl-card {
+    background: var(--ab-bg-card);
+    border: 1px solid var(--ab-border);
+    border-radius: 14px;
+    padding: 20px 22px;
+    max-width: 380px;
+    transition: border-color .2s, box-shadow .2s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ab-tl-card:hover {
+    border-color: var(--ab-primary);
+    box-shadow: 0 8px 24px rgba(40, 116, 240, 0.10);
+}
+
+.ab-tl-year {
+    display: inline-block;
+    background: var(--ab-primary);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+}
+
+.ab-tl-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ab-text);
+    margin-bottom: 8px;
+}
+
+.ab-tl-desc {
+    font-size: 13px;
+    color: var(--ab-muted);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ── Team Cards ── */
+.ab-team-card {
+    background: var(--ab-bg-card);
+    border: 1px solid var(--ab-border);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    transition: border-color .2s, transform .2s, box-shadow .2s;
+    height: 100%;
+}
+
+.ab-team-card:hover {
+    border-color: var(--ab-primary);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(40, 116, 240, 0.10);
+}
+
+.ab-team-avatar {
+    width: 64px;
+    height: 64px;
+    background: var(--ab-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 auto 16px;
+    box-shadow: 0 4px 16px rgba(40, 116, 240, 0.25);
+}
+
+.ab-team-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ab-text);
+    margin-bottom: 4px;
+}
+
+.ab-team-role {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ab-primary);
+    margin-bottom: 8px;
+    letter-spacing: 0.03em;
+}
+
+.ab-team-loc {
+    font-size: 12px;
+    color: var(--ab-sub);
+    margin-bottom: 16px;
+}
+
+.ab-team-socials {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.ab-social-btn {
+    width: 32px;
+    height: 32px;
+    background: var(--ab-bg-card2);
+    border: 1px solid var(--ab-border);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ab-sub);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.ab-social-btn:hover {
+    border-color: var(--ab-primary);
+    color: var(--ab-primary);
+    background: var(--ab-primary-light);
+}
+
+/* ── Award Cards ── */
+.ab-award-card {
+    background: var(--ab-bg-card);
+    border: 1px solid var(--ab-border);
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: border-color .2s, transform .2s, box-shadow .2s;
+    height: 100%;
+}
+
+.ab-award-card:hover {
+    border-color: var(--ab-yellow);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.12);
+}
+
+.ab-award-icon {
+    width: 54px;
+    height: 54px;
+    background: #FEF3C7;
+    border: 1px solid #FDE68A;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ab-yellow);
+    font-size: 24px;
+    margin: 0 auto 14px;
+}
+
+.ab-award-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ab-text);
+    margin-bottom: 6px;
+}
+
+.ab-award-body {
+    font-size: 12px;
+    color: var(--ab-muted);
+}
+
+/* ── CTA ── */
+.ab-cta {
+    position: relative;
+    padding: 90px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #EBF2FF 0%, #F0F4FF 50%, #E8F4FB 100%);
+    border-top: 1px solid var(--ab-border);
+    overflow: hidden;
+}
+
+.ab-cta-glow {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(ellipse at center, rgba(40, 116, 240, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* ════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ════════════════════════════════════════ */
+
+/* ── 2K / Large desktops (≥1400px) ── */
+@media (min-width: 1400px) {
+    .ab-section-title {
+        font-size: 2.6rem;
+    }
+
+    .ab-hero-title {
+        font-size: 3.8rem;
+    }
+}
+
+/* ── Standard desktop (1200px–1399px) ── */
+@media (max-width: 1399px) {
+    .ab-section-title {
+        font-size: 2.2rem;
+    }
+
+    .ab-award-card {
+        padding: 28px 18px;
+    }
+}
+
+/* ── Small desktop / large tablet landscape (992px–1199px) ── */
+@media (max-width: 1199px) {
+    .ab-section {
+        padding: 60px 0;
+    }
+
+    .ab-section-title {
+        font-size: 2rem;
+    }
+
+    .ab-hero {
+        padding: 80px 0 60px;
+    }
+
+    .ab-tl-card {
+        max-width: 320px;
+    }
+}
+
+/* ── Tablet landscape / small desktop (768px–991px) ── */
+@media (max-width: 991px) {
+    .ab-section {
+        padding: 52px 0;
+    }
+
+    .ab-section-title {
+        font-size: 1.8rem;
+    }
+
+    .ab-hero {
+        padding: 64px 16px 52px;
+    }
+
+    .ab-hero-title {
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
+    }
+
+    .ab-stats-strip {
+        padding: 28px 0;
+    }
+
+    .ab-cta {
+        padding: 64px 16px;
+    }
+
+    .ab-award-card {
+        padding: 26px 16px;
+    }
+
+    .ab-award-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+    }
+
+    .ab-award-title {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .ab-section {
+        padding: 44px 0;
+    }
+
+    .ab-section-title {
+        font-size: 1.6rem;
+        letter-spacing: -0.3px;
+    }
+
+    .ab-section-sub {
+        font-size: 14px;
+    }
+
+    .ab-hero {
+        padding: 52px 16px 44px;
+    }
+
+    .ab-hero-title {
+        font-size: clamp(1.6rem, 6vw, 2.4rem);
+        letter-spacing: -0.5px;
+    }
+
+    .ab-hero-sub {
+        font-size: 15px;
+    }
+
+    .ab-stats-strip {
+        padding: 24px 0;
+    }
+
+    .ab-stat-val {
+        font-size: 1.6rem;
+    }
+
+    .ab-stat-card {
+        padding: 18px 12px;
+    }
+
+    /* Timeline → single column */
+    .ab-timeline-line {
+        display: none;
+    }
+
+    .ab-timeline-item,
+    .ab-timeline-item.ab-tl-right {
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .row.g-4.yah {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ab-tl-dot {
+        display: none;
+    }
+
+    .ab-tl-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .ab-cta {
+        padding: 52px 16px;
+    }
+
+    .ab-story-panel {
+        margin-top: 24px;
+    }
+
+    .mb-5 {
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+/* ── Large mobile (480px–575px) ── */
+@media (max-width: 575px) {
+    .ab-section {
+        padding: 36px 0;
+    }
+
+    .row.g-4.yah {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ab-section-title {
+        font-size: 1.45rem;
+        line-height: 1.25;
+    }
+
+    .ab-section-label {
+        font-size: 10px;
+        padding: 5px 12px;
+    }
+
+    .ab-hero {
+        padding: 44px 16px 36px;
+    }
+
+    .ab-hero-title {
+        font-size: clamp(1.45rem, 7vw, 2rem);
+    }
+
+    .ab-hero-sub {
+        font-size: 14px;
+    }
+
+    .ab-btn-primary,
+    .ab-btn-ghost {
+        font-size: 14px;
+        padding: 11px 22px;
+    }
+
+    .ab-stat-val {
+        font-size: 1.45rem;
+    }
+
+    .ab-stat-label {
+        font-size: 10px;
+    }
+
+    .ab-value-card {
+        padding: 22px 18px;
+    }
+
+    .ab-team-card {
+        padding: 22px 18px;
+    }
+
+    .ab-award-card {
+        padding: 22px 16px;
+        border-radius: 14px;
+    }
+
+    .ab-award-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .ab-award-title {
+        font-size: 13px;
+    }
+
+    .ab-award-body {
+        font-size: 11px;
+    }
+
+    .ab-cta {
+        padding: 44px 16px;
+    }
+
+    .mb-5 {
+        margin-bottom: 1.25rem !important;
+    }
+}
+
+
+@media (max-width: 479px) {
+    .ab-section {
+        padding: 32px 0;
+    }
+
+    .ab-section-title {
+        font-size: 1.3rem;
+    }
+
+    .ab-hero {
+        padding: 36px 12px 30px;
+    }
+
+    .ab-hero-title {
+        font-size: clamp(1.3rem, 7.5vw, 1.8rem);
+        letter-spacing: -0.3px;
+    }
+
+    .ab-hero-sub {
+        font-size: 13.5px;
+    }
+
+    .ab-btn-primary,
+    .ab-btn-ghost {
+        width: 100%;
+        max-width: 260px;
+        justify-content: center;
+        font-size: 14px;
+        padding: 13px 20px;
+    }
+
+    .ab-stats-strip {
+        padding: 20px 0;
+    }
+
+    .ab-stat-card {
+        padding: 16px 10px;
+        border-radius: 12px;
+    }
+
+    .ab-stat-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+
+    .ab-stat-val {
+        font-size: 1.3rem;
+    }
+
+    .ab-stat-label {
+        font-size: 9.5px;
+    }
+
+    .ab-story-panel {
+        padding: 20px 16px;
+        border-radius: 14px;
+    }
+
+    .ab-value-card {
+        padding: 20px 16px;
+        border-radius: 14px;
+    }
+
+    .ab-value-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 19px;
+        border-radius: 12px;
+    }
+
+    .ab-value-title {
+        font-size: 15px;
+    }
+
+    .ab-tl-card {
+        padding: 16px 16px;
+    }
+
+    .ab-team-avatar {
+        width: 56px;
+        height: 56px;
+        font-size: 22px;
+    }
+
+    .ab-team-name {
+        font-size: 15px;
+    }
+
+    .ab-cta {
+        padding: 36px 12px;
+    }
+}
+
+/* ── Small mobile (320px–399px) ── */
+@media (max-width: 399px) {
+    .ab-section {
+        padding: 28px 0;
+    }
+
+    .ab-section-title {
+        font-size: 1.2rem;
+    }
+
+    .ab-section-sub {
+        font-size: 13px;
+    }
+
+    .ab-hero {
+        padding: 30px 12px 26px;
+    }
+
+    .ab-hero-title {
+        font-size: clamp(1.2rem, 8vw, 1.6rem);
+    }
+
+    .ab-hero-sub {
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    .ab-btn-primary,
+    .ab-btn-ghost {
+        max-width: 240px;
+        font-size: 13.5px;
+        padding: 12px 18px;
+    }
+
+    .ab-stat-card {
+        padding: 14px 8px;
+    }
+
+    .ab-stat-val {
+        font-size: 1.2rem;
+    }
+
+    .ab-stat-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .ab-stat-label {
+        font-size: 9px;
+    }
+
+    .ab-story-panel {
+        padding: 16px 14px;
+    }
+
+    .ab-feature-text {
+        font-size: 12px;
+    }
+
+    .ab-value-card {
+        padding: 18px 14px;
+    }
+
+    .ab-value-title {
+        font-size: 14px;
+    }
+
+    .ab-value-desc {
+        font-size: 12px;
+    }
+
+    .ab-team-card {
+        padding: 18px 14px;
+    }
+
+    .ab-team-avatar {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .ab-team-name {
+        font-size: 14px;
+    }
+
+    .ab-award-card {
+        padding: 18px 12px;
+    }
+
+    .ab-award-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .ab-award-title {
+        font-size: 13px;
+    }
+
+    .ab-cta {
+        padding: 30px 12px;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+}

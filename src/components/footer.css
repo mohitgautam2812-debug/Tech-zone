@@ -1,0 +1,517 @@
+/* ── Footer.css ─────────────────────────────────────────────────────────────
+   Matches TechZone website exactly — white/light theme, blue primary
+   Same as Navbar + Homepage design system
+   ─────────────────────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* ── CSS Variables (exact match to site theme) ───────────────────────────── */
+.tz-footer,
+.tz-footer-bottom {
+    --tz-primary: #2874F0;
+    --tz-primary-dark: #1a5fd1;
+    --tz-primary-light: #e8f0fe;
+    --tz-accent: #FF6D00;
+    --tz-success: #00897B;
+    --tz-success-light: #e0f2f1;
+
+    --tz-bg: #F5F7FA;
+    --tz-bg-white: #FFFFFF;
+    --tz-bg-subtle: #F8FAFC;
+
+    --tz-text: #111827;
+    --tz-text-secondary: #6B7280;
+    --tz-text-muted: #9CA3AF;
+
+    --tz-border: #E5E7EB;
+    --tz-border-hover: #D1D5DB;
+
+    --tz-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --tz-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+    --tz-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+    --tz-radius-sm: 6px;
+    --tz-radius: 10px;
+    --tz-radius-lg: 16px;
+    --tz-radius-xl: 24px;
+    --tz-radius-pill: 999px;
+
+    --tz-font: 'Plus Jakarta Sans', sans-serif;
+    --tz-transition: 0.2s ease;
+    --tz-transition-md: 0.3s ease;
+
+    box-sizing: border-box;
+}
+
+.tz-footer *,
+.tz-footer-bottom * {
+    box-sizing: border-box;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FOOTER — LIGHT THEME (matches website white/blue style)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.tz-footer {
+    background: #ffffff;
+    color: var(--tz-text-secondary);
+    border-top: 1px solid var(--tz-border);
+    font-family: var(--tz-font);
+}
+
+/* ── Free delivery top bar (matches site's announcement bar) ─────────────── */
+.tz-footer-announce {
+    background: var(--tz-primary);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.tz-footer-announce p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    font-family: var(--tz-font);
+    letter-spacing: 0.01em;
+}
+
+.tz-footer-announce p span {
+    opacity: 0.75;
+    margin: 0 16px;
+}
+
+/* ── Main footer body ────────────────────────────────────────────────────── */
+.tz-footer-body {
+    padding: 56px 0 48px;
+    background: #ffffff;
+}
+
+/* ── Brand column ─────────────────────────────────────────────────────────── */
+.tz-footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    text-decoration: none;
+}
+
+.tz-footer-logo-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--tz-primary);
+    border-radius: var(--tz-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tz-footer-logo-icon i {
+    color: #fff;
+    font-size: 18px;
+}
+
+.tz-footer-logo-text {
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--tz-text);
+    line-height: 1;
+    font-family: var(--tz-font);
+}
+
+.tz-footer-logo-text span {
+    color: var(--tz-primary);
+}
+
+.tz-footer-desc {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: var(--tz-text-secondary);
+    max-width: 270px;
+    margin-bottom: 20px;
+    font-family: var(--tz-font);
+}
+
+/* ── Trust badges ─────────────────────────────────────────────────────────── */
+.tz-footer-trust-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+.tz-footer-trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--tz-primary-light);
+    border: 1px solid rgba(40, 116, 240, 0.18);
+    color: var(--tz-primary);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: var(--tz-radius-sm);
+    font-family: var(--tz-font);
+}
+
+.tz-footer-trust-badge i {
+    font-size: 12px;
+}
+
+/* ── Social icons ─────────────────────────────────────────────────────────── */
+.tz-footer-socials {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tz-social-btn {
+    width: 38px;
+    height: 38px;
+    background: var(--tz-bg-subtle);
+    border: 1px solid var(--tz-border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--tz-text-secondary);
+    font-size: 15px;
+    text-decoration: none;
+    transition: background var(--tz-transition), border-color var(--tz-transition),
+        color var(--tz-transition), transform var(--tz-transition),
+        box-shadow var(--tz-transition);
+}
+
+.tz-social-btn:hover {
+    background: var(--tz-primary);
+    border-color: var(--tz-primary);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 116, 240, 0.3);
+}
+
+.tz-footer-heading {
+    font-size: 13px;
+    font-weight: 800;
+    margin-left: 15px;
+    color: var(--tz-text);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-family: var(--tz-font);
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.tz-footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 28px;
+    height: 2.5px;
+    background: var(--tz-primary);
+    border-radius: 2px;
+}
+
+/* ── Nav Links ────────────────────────────────────────────────────────────── */
+.tz-footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tz-footer-links li {
+    margin-bottom: 11px;
+}
+
+.tz-footer-links a {
+    font-size: 13.5px;
+    color: var(--tz-text-secondary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0px;
+    transition: color var(--tz-transition), gap var(--tz-transition);
+    font-family: var(--tz-font);
+    font-weight: 500;
+}
+
+.tz-footer-links a i {
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity var(--tz-transition);
+}
+
+.tz-footer-links a:hover {
+    color: var(--tz-primary);
+    gap: 6px;
+}
+
+.tz-footer-links a:hover i {
+    opacity: 1;
+}
+
+/* ── Contact Items ────────────────────────────────────────────────────────── */
+.tz-footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tz-footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 13.5px;
+    color: var(--tz-text-secondary);
+    line-height: 1.65;
+    font-family: var(--tz-font);
+    font-weight: 500;
+}
+
+.tz-contact-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    background: var(--tz-primary-light);
+    border: 1px solid rgba(40, 116, 240, 0.18);
+    border-radius: var(--tz-radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+
+.tz-contact-icon i {
+    font-size: 13px;
+    color: var(--tz-primary);
+}
+
+/* ── Newsletter Strip ─────────────────────────────────────────────────────── */
+.tz-footer-newsletter {
+    background: var(--tz-primary-light);
+    border: 1px solid rgba(40, 116, 240, 0.15);
+    border-radius: var(--tz-radius-lg);
+    padding: 22px 28px;
+    margin-bottom: 48px;
+}
+
+.tz-footer-newsletter-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--tz-text);
+    margin-bottom: 4px;
+    font-family: var(--tz-font);
+}
+
+.tz-footer-newsletter-sub {
+    font-size: 13px;
+    color: var(--tz-text-secondary);
+    margin-bottom: 14px;
+    font-family: var(--tz-font);
+}
+
+.tz-footer-newsletter-form {
+    display: flex;
+    gap: 8px;
+}
+
+.tz-footer-newsletter-input {
+    flex: 1;
+    background: #ffffff;
+    border: 1.5px solid var(--tz-border);
+    border-radius: var(--tz-radius-pill);
+    padding: 11px 18px;
+    font-size: 13.5px;
+    color: var(--tz-text);
+    outline: none;
+    font-family: var(--tz-font);
+    transition: border-color var(--tz-transition), box-shadow var(--tz-transition);
+}
+
+.tz-footer-newsletter-input::placeholder {
+    color: var(--tz-text-muted);
+}
+
+.tz-footer-newsletter-input:focus {
+    border-color: var(--tz-primary);
+    box-shadow: 0 0 0 3px rgba(40, 116, 240, 0.1);
+}
+
+.tz-footer-newsletter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--tz-primary);
+    color: #fff;
+    font-weight: 700;
+    font-size: 13.5px;
+    padding: 11px 22px;
+    border-radius: var(--tz-radius-pill);
+    border: none;
+    cursor: pointer;
+    font-family: var(--tz-font);
+    transition: background var(--tz-transition), box-shadow var(--tz-transition), transform var(--tz-transition);
+    white-space: nowrap;
+}
+
+.tz-footer-newsletter-btn:hover {
+    background: var(--tz-primary-dark);
+    box-shadow: 0 4px 14px rgba(40, 116, 240, 0.35);
+    transform: translateY(-1px);
+}
+
+/* ── Divider ──────────────────────────────────────────────────────────────── */
+.tz-footer-divider {
+    border: none;
+    border-top: 1px solid var(--tz-border);
+    margin: 0;
+}
+
+/* ── Payment icons ────────────────────────────────────────────────────────── */
+.tz-footer-payments {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.tz-footer-payment-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--tz-text-muted);
+    margin-right: 2px;
+    font-family: var(--tz-font);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tz-payment-icon {
+    height: 24px;
+    background: var(--tz-bg-subtle);
+    border: 1px solid var(--tz-border);
+    border-radius: 5px;
+    padding: 2px 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10.5px;
+    font-weight: 800;
+    color: var(--tz-text-secondary);
+    font-family: var(--tz-font);
+    letter-spacing: 0.02em;
+    transition: border-color var(--tz-transition), color var(--tz-transition);
+}
+
+.tz-payment-icon:hover {
+    border-color: var(--tz-primary);
+    color: var(--tz-primary);
+}
+
+/* ── Bottom bar ───────────────────────────────────────────────────────────── */
+.tz-footer-bottom {
+    background: var(--tz-bg);
+    padding: 16px 0;
+    border-top: 1px solid var(--tz-border);
+}
+
+.tz-footer-copy {
+    font-size: 12.5px;
+    color: var(--tz-text-muted);
+    margin: 0;
+    font-family: var(--tz-font);
+    font-weight: 500;
+}
+
+.tz-footer-powered {
+    font-size: 12.5px;
+    color: var(--tz-text-muted);
+    margin: 0;
+    font-family: var(--tz-font);
+    font-weight: 500;
+}
+
+.tz-footer-powered span {
+    color: var(--tz-primary);
+    font-weight: 700;
+}
+
+/* ── Bottom policy links ──────────────────────────────────────────────────── */
+.tz-footer-bottom-links {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+}
+
+.tz-footer-bottom-links a {
+    font-size: 12px;
+    color: var(--tz-text-muted);
+    text-decoration: none;
+    padding: 0 10px;
+    border-right: 1px solid var(--tz-border);
+    font-family: var(--tz-font);
+    font-weight: 500;
+    transition: color var(--tz-transition);
+    line-height: 1;
+}
+
+.tz-footer-bottom-links a:first-child {
+    padding-left: 0;
+}
+
+.tz-footer-bottom-links a:last-child {
+    border-right: none;
+}
+
+.tz-footer-bottom-links a:hover {
+    color: var(--tz-primary);
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+@media (max-width: 991px) {
+    .tz-footer-newsletter-form {
+        flex-direction: column;
+    }
+
+    .tz-footer-newsletter-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .tz-footer-body {
+        padding: 36px 0 28px;
+    }
+
+    .tz-footer-newsletter {
+        padding: 18px;
+        margin-bottom: 36px;
+    }
+
+    .tz-footer-desc {
+        max-width: 100%;
+    }
+
+    .tz-footer-bottom-links {
+        justify-content: center;
+    }
+
+    .tz-footer-payments {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .tz-footer-trust-row {
+        gap: 6px;
+    }
+
+    .tz-footer-announce p {
+        font-size: 11px;
+    }
+}
