@@ -784,13 +784,10 @@ export default function Products() {
                                         >
                                             <div className="tz-pc h-100">
 
-                                                
+
                                                 <div className="tz-pc-img">
                                                     <img
-                                                        src={
-                                                            (p.image_url?.replace("http://", "https://"))
-                                                            || `${BASE}/storage/${p.image}`
-                                                        }
+                                                        src={p.image_url || `${BASE}/storage/${p.image}`}
                                                         alt={p.name}
                                                     />
 
