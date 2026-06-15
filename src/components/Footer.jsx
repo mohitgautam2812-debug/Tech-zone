@@ -3,13 +3,16 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./footer.css";
 
-export default function Footer()  {
+
+const BASE = "https://tech-zone-backend-production.up.railway.app";
+
+export default function Footer() {
 
     const [settings, setSettings] = useState(null);
 
     useEffect(() => {
         axios
-            .get("http://127.0.0.1:8000/api/footer-settings")
+            .get(`${BASE}/api/footer-settings`)
             .then((response) => setSettings(response.data))
             .catch((error) => console.log(error));
     }, []);
@@ -193,11 +196,11 @@ export default function Footer()  {
                                     </li>
                                 ))}
                             </ul>
-                            </div>
+                        </div>
 
-                            {/* Contact info */}
-                             <div className="col-md-3 col-lg-2">
-                               <div className="tz-footer-heading">Contact</div>
+                        {/* Contact info */}
+                        <div className="col-md-3 col-lg-2">
+                            <div className="tz-footer-heading">Contact</div>
                             <ul className="tz-footer-contact">
                                 <li>
                                     <div className="tz-contact-icon">
@@ -224,7 +227,7 @@ export default function Footer()  {
                 </div>
             </div>
 
-          
+
 
         </footer>
     );

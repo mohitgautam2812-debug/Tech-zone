@@ -45,7 +45,7 @@ const Navbar = () => {
     const [priceLimit, setPriceLimit] = useState(0);
     const location = useLocation();
     const dropRef = useRef(null);
-    const API = "http://127.0.0.1:8000/api";
+    const BASE = "https://tech-zone-backend-production.up.railway.app";
 
     useEffect(() => {
 
@@ -96,9 +96,7 @@ const Navbar = () => {
 
             const user = JSON.parse(localStorage.getItem("user"));
 
-            const res = await axios.get(
-                `http://127.0.0.1:8000/api/cart/${user.id}`
-            );
+            const res = await axios.get(`${BASE}/api/cart/${user.id}`);
 
             setCartCount(res.data.length);
 
@@ -115,9 +113,7 @@ const Navbar = () => {
 
             const user = JSON.parse(localStorage.getItem("user"));
 
-            const res = await axios.get(
-                `http://127.0.0.1:8000/api/wishlist/${user.id}`
-            );
+            const res = await axios.get(`${BASE}/api/wishlist/${user.id}`);
 
             setWishlistCount(res.data.length);
 
@@ -167,8 +163,7 @@ const Navbar = () => {
 
         if (category) setActiveCategory(category);
 
-        axios
-            .get("http://127.0.0.1:8000/api/products", { params })
+        axios.get(`${BASE}/api/products`, { params })
             .then((res) => {
                 const data = Array.isArray(res.data) ? res.data : (res.data?.data ?? []);
                 setProducts(data);

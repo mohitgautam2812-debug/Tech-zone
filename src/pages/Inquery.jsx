@@ -2,6 +2,10 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
+
+
+const BASE = "https://tech-zone-backend-production.up.railway.app";
+
 const purposes = [
     "Astrological / Rashi Ratna",
     "Health & Healing",
@@ -37,8 +41,7 @@ export default function Inquery() {
     useEffect(() => {
         if (id) {
             setProductLoading(true);
-            axios
-                .get(`http://127.0.0.1:8000/api/products/${id}`)
+            axios.get(`${BASE}/api/products/${id}`)
                 .then((res) => {
                     setProduct(res.data);
                     setProductLoading(false);
@@ -63,7 +66,7 @@ export default function Inquery() {
             // Send inquiry to Laravel API
             // product_id → links to product
             // owner gets notified on backend
-            await axios.post("http://127.0.0.1:8000/api/inquiries", {
+            axios.post(`${BASE}/api/inquiries`, {
                 ...form,
                 product_id: id || null,
             });
@@ -145,7 +148,7 @@ export default function Inquery() {
                                         {/* Product Image */}
                                         <div style={{ position: "relative" }}>
                                             <img
-                                                src={`http://127.0.0.1:8000/storage/${product.image}`}
+                                                src={`${BASE}/storage/${product.image}`}
                                                 alt={product.name}
                                                 className="w-100"
                                                 style={{ height: "200px", objectFit: "cover" }}
@@ -199,8 +202,8 @@ export default function Inquery() {
                                             >
                                                 <i
                                                     className={`bi ${product.stock > 0
-                                                            ? "bi-check-circle"
-                                                            : "bi-x-circle"
+                                                        ? "bi-check-circle"
+                                                        : "bi-x-circle"
                                                         } me-1`}
                                                 />
                                                 {product.stock > 0
