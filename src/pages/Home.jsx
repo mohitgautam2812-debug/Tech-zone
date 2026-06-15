@@ -349,7 +349,7 @@
                                         <div className="tz-flash-product" key={p.id}>
                                             <div className="tz-flash-product-img">
                                                 {p.image
-                                                    ? <img src={`${BASE}/storage/${p.image}`} alt={p.name} />
+                                                    ? <img src={p.image_url || `${BASE}/storage/${p.image}`} alt={p.name} />
                                                     : <i className="bi bi-headphones" style={{ fontSize: "48px", color: "rgba(255,255,255,0.4)" }} />
                                                 }
                                             </div>
@@ -400,7 +400,7 @@
                                 {featuredProducts.map((p) => (
                                     <div className="tz-product-card" key={p.id}>
                                         <div className="tz-product-img-wrap">
-                                            <img src={`${BASE}/storage/${p.image}`} alt={p.name} />
+                                            <img src={p.image_url || `${BASE}/storage/${p.image}`} alt={p.name} />
                                             <span className="tz-product-badge featured">FEATURED</span>
                                             <button
                                                 className="tz-wishlist-btn"

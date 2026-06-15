@@ -291,7 +291,7 @@ export default function Products() {
 
         try {
 
-           await axios.post(`${BASE}/api/cart`,
+            await axios.post(`${BASE}/api/cart`,
                 {
                     user_id: user.id,
                     product_id: productId,
@@ -328,7 +328,7 @@ export default function Products() {
         try {
 
             const res = await axios.get(
-               `${BASE}/api/wishlist/${user.id}`
+                `${BASE}/api/wishlist/${user.id}`
             );
 
             setWishlistData(res.data);
@@ -359,7 +359,7 @@ export default function Products() {
 
         }
         try {
-           await axios.post(`${BASE}/api/wishlist`, {
+            await axios.post(`${BASE}/api/wishlist`, {
                 user_id: user?.id,
                 product_id: product.id,
             });
@@ -784,10 +784,13 @@ export default function Products() {
                                         >
                                             <div className="tz-pc h-100">
 
-                                                {/* ── Image ── */}
+                                                
                                                 <div className="tz-pc-img">
                                                     <img
-                                                     src={p.image_url || `${BASE}/storage/${p.image}`}
+                                                        src={
+                                                            (p.image_url?.replace("http://", "https://"))
+                                                            || `${BASE}/storage/${p.image}`
+                                                        }
                                                         alt={p.name}
                                                     />
 
